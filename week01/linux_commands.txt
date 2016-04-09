@@ -1,0 +1,5 @@
+mkdir -p A/B
+mkdir -p A/C/E
+mkdir -p A/C/F
+mkdir -p A/D/H
+mkdir -p A/D/I
