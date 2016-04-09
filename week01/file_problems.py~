@@ -1,0 +1,52 @@
+import sys
+from random import randint
+
+
+def cat(file):
+    f = open(file, 'r')
+    print(f.read())
+
+    f.close()
+
+
+def cat2(files):
+    for file in files:
+        f = open(file, 'r')
+        print(f.read())
+        f.close()
+
+
+def random_numbers(number):
+    result = ""
+    for i in range(0, number):
+        result += str(randint(0, number))
+        result += " "
+    return result
+
+
+def generate_number(file_name, number):
+    f = open(file_name, 'w')
+    f.write(random_numbers(int(number)))
+    f.close
+
+
+def sum_numbers(file):
+    with open(file, 'r') as f:
+        numbers = f.read()
+
+    split_numbers = numbers.split()
+
+    result = 0
+    for number in split_numbers:
+        result += int(number)
+
+    return result
+
+
+def main():
+    print(sum_numbers(sys.argv[1]))
+    generate_number()
+
+
+if __name__ == '__main__':
+    main()
